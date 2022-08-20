@@ -5,4 +5,4 @@
 Android
 
 ## Preview
-<img  src="Preview/preview.gif" width="250" height="550"> &nbsp;&nbsp;&nbsp; 
+<img  src="Preview/preview.gif" width="300" height="550"> &nbsp;&nbsp;&nbsp; 
