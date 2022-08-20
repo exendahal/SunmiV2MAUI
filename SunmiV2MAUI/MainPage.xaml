@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="SUNMI V2 Printer MAUI"
+             x:Class="SunmiV2MAUI.MainPage">
+    <ScrollView>
+        <Grid>
+            <StackLayout Margin="20, 0"
+                         VerticalOptions="CenterAndExpand">
+                <Image Source="maui"
+                       HeightRequest="120"
+                       WidthRequest="120"
+                       Aspect="AspectFill"
+                       Margin="0,24" />
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <Label Text="SUNMI V2"
+                           TextColor="{StaticResource PrimaryColor}"
+                           FontSize="32"
+                           HorizontalTextAlignment="Center" />
+
+                    <Label Text="Printer"
+                           TextColor="{StaticResource PrimaryColor}"
+                           FontSize="22"
+                           VerticalTextAlignment="End"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+
+                <Label Text="This demo shows text, Bar code and QR print with bluetooth printer. This is tested on Sunmi V2. If you want to print using any other buetooth printer, click on select printer option."
+                       FontSize="18"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Start" />
+
+                <Grid Margin="0,12"
+                      ColumnSpacing="8"
+                      RowSpacing="8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="Print Text"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Clicked="PrintTextButton_Clicked"
+                            BackgroundColor="{StaticResource SecondryColor}"
+                            TextColor="White"
+                            IsEnabled="True" />
+
+                    <Button Text="Print QR"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Clicked="PrintQrButton_Clicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"
+                            IsEnabled="True" />
+
+
+                    <Button Text="Print Bar Code"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Clicked="PrintBarCode_Clicked"
+                            BackgroundColor="{StaticResource PrimaryColor}"
+                            TextColor="White"
+                            IsEnabled="True" />
+
+                    <Button Text="Select Printer"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Clicked="SelectPrinter_Clicked"
+                            BackgroundColor="{StaticResource SecondryColor}"
+                            TextColor="White"
+                            IsEnabled="True" />
+                </Grid>
+
+            </StackLayout>
+
+            <Label Text="&lt;github.com/exendahal/&gt;"
+                   HorizontalOptions="EndAndExpand"
+                   VerticalOptions="EndAndExpand"
+                   Margin="12"
+                   TextColor="Gray"
+                   FontSize="8" />
+        </Grid>
+    </ScrollView>  
+
+</ContentPage>
